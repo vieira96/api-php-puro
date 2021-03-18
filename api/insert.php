@@ -10,6 +10,8 @@ $method = strtolower($_SERVER['REQUEST_METHOD']);
 
 if($method === 'post') {
 
+    //filtro todos os campos
+    //todos são campos obrigatórios
     $name = filter_input(INPUT_POST, 'name');
     $email = filter_input(INPUT_POST, 'email');
     $password = filter_input(INPUT_POST, 'password'); 
@@ -24,6 +26,7 @@ if($method === 'post') {
         $newUser = new User();
     
         $newUser->name = $name;
+        //verifico se ja existe um usuário com o email
         if(!$userDao->findByEmail($email)) {
             $newUser->email = $email;
             $newUser->password = password_hash($password, PASSWORD_DEFAULT);

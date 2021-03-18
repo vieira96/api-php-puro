@@ -1,11 +1,13 @@
 <?php
 
+//configuro o banco
 $base = "http://localhost/api-php-puro";
 $db_name = "api-php-puro";
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "root";
 
+//configuro o array de respostas
 $array = [
     'error' => '',
     'result' => ''

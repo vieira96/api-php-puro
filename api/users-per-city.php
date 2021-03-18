@@ -11,6 +11,7 @@ if($method === 'get') {
     $cityDao = new CityDaoMysql($pdo);
     $cities = $cityDao->findAll();
     foreach($cities as $city) {
+        //pego a quantidade de usuários com o id da cidade
         $count = $userDao->countUsersByState($city['id']);
         $results[] = 'Existem ' . $count['quantity'] . ' usuários cadastrados com a cidade ' . $city['name'];
     }
