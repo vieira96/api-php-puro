@@ -9,19 +9,19 @@
 
 # endpoints
 
-suabase/api/insert.php create user
-suabase/api/update?id= update user
-suabase/api/delete?id= delete user
-suabase/api/user?id= read user
+POST suabase/api/insert.php create user
+PUT suabase/api/update?id= update user
+DELETE suabase/api/delete?id= delete user
+GET suabase/api/user?id= read user
 
-suabase/api/states pega todos os estados
-suabase/api/states?id= pega um unico estado
+GET suabase/api/states pega todos os estados
+GET suabase/api/states?id= pega um unico estado
 
-suabase/api/cities pega todas as cidades
-suabase/api/cities?id= pega uma unica cidade
+GET suabase/api/cities pega todas as cidades
+GET suabase/api/cities?id= pega uma unica cidade
 
-suabase/api/adresses pega todos os endereços
-suabase/api/adresses?id= pega um unico endereço
+GET suabase/api/adresses pega todos os endereços
+GET suabase/api/adresses?id= pega um unico endereço
 
-suabase/api/users-per-city pega os usuários por cidade
-suabase/api/users-per-state pega os usuários por estado
+GET suabase/api/users-per-city pega os usuários por cidade
+GET suabase/api/users-per-state pega os usuários por estado
