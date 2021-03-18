@@ -32,13 +32,16 @@ class CityDaoMysql {
         }
     }
 
-    public function findById($id, $full = false)
+    public function findById($id)
     {
         if(!empty($id)){
             $sql = $this->pdo->prepare("SELECT * FROM cities WHERE id = :id");
             $sql->bindValue(":id", $id);
             $sql->execute();
             
+            if($sql->rowCount()) {
+                return $sql->fetch(PDO::FETCH_ASSOC);
+            }
         }
 
         return false;

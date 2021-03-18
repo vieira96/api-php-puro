@@ -15,7 +15,7 @@ if($method === 'post') {
     $name = filter_input(INPUT_POST, 'name');
     $email = filter_input(INPUT_POST, 'email');
     $password = filter_input(INPUT_POST, 'password'); 
-    $street_name = filter_input(INPUT_POST, 'street_name');
+    $street_name = filter_input(INPUT_POST, 'street');
     $number = filter_input(INPUT_POST, 'number');
     $state_name = filter_input(INPUT_POST, 'state_name');
     $city_name = filter_input(INPUT_POST, 'city_name');

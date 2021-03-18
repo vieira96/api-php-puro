@@ -32,7 +32,7 @@ class StateDaoMysql {
         }
     }
 
-    public function findById($id, $full = false)
+    public function findById($id)
     {
         if(!empty($id)){
             $sql = $this->pdo->prepare("SELECT * FROM states WHERE id = :id");
